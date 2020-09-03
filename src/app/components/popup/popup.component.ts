@@ -9,7 +9,7 @@ import {User} from '../../models/User';
 export class PopupComponent implements OnInit {
 
   dataUser = new User();
-  @Input()  indicate: boolean;
+  @Input()  indicate: String;
   @Output() hide = new EventEmitter();
   @Output() user = new EventEmitter();
 
@@ -22,7 +22,7 @@ export class PopupComponent implements OnInit {
     this.hide.emit(false);
   }
 
-  addUserOrDelete(): void {
+  addUserOrDeleteorFilter(): void {
     this.user.emit(this.dataUser);
     this.hide.emit(false);
   }

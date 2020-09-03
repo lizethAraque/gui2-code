@@ -27,8 +27,9 @@
       </div>
   
       <div class="button">
-        <button name="Eliminar" type="button" class="add" (click)="addUserOrDelete()" *ngIf="!indicate">Eliminar-</button>
-        <button name="Agregar" type="button" class="add" (click)="addUserOrDelete()"  *ngIf="indicate">Agregar</button>
+        <button name="Buscar" type="button" class="add" (click)="addUserOrDeleteorFilter()" *ngIf="indicate === '0'">Buscar</button>
+        <button name="Eliminar" type="button" class="add" (click)="addUserOrDeleteorFilter()" *ngIf="indicate === '1'">Eliminar-</button>
+        <button name="Agregar" type="button" class="add" (click)="addUserOrDeleteorFilter()"  *ngIf="indicate === '2'">Agregar</button>
         <button name="Cancelar" type="button" class="delete" (click)="hidePage()">Cancelar</button>
       </div>
     </div>

@@ -9,14 +9,14 @@ export class HomeComponent implements OnInit {
 
   students = new Array();
   state = false;
-  indicate = true;
+  indicate = '0';
 
   constructor() {}
 
   ngOnInit(): void {}
 
   add(): void{
-    this.indicate = true;
+    this.indicate = '2';
     this.state = true;
   }
 
@@ -25,20 +25,28 @@ export class HomeComponent implements OnInit {
   }
 
   private addUserOrDelete(userData: User): void {
-    if (this.indicate){
+    if (this.indicate === '2'){
       this.students.push(userData);
-    } else {
+    } else if(this.indicate === '1') {
       for (let i = 0; i < this.students.length; i++) {
         if (this.students[i].code === userData.code) {
           this.students.splice(i, 1);
           return;
         }
       }
+    } else if(this.indicate === '0')  {
+      this.students = this.students.filter(dta => dta.code ===  userData.code);
     }
   }
 
   delete(): void {
-    this.indicate = false;
+    this.indicate = '1';
+    this.state = true;
+  }
+
+  
+  search(): void {
+    this.indicate = '0';
     this.state = true;
   }
 

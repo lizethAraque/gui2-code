@@ -26,6 +26,9 @@
       <button name="Elminar" type="button" class="delete" (click)="delete()">
         Eliminar
       </button>
+      <button name="Elminar" type="button" class="search" (click)="search()">
+        Buscar
+      </button>
     </div>
   
     <app-popup *ngIf="state" (hide)="hideOrShowPopUp($event)" (user)="addUserOrDelete($event)" [indicate]="indicate"> </app-popup>
