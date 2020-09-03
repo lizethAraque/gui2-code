@@ -1,0 +1,40 @@
+.container {
+    width: 100vh;
+    height: 100%;
+  .tableStyile {
+    table {
+      border-collapse: collapse;
+    }
+    td, th /* Asigna un borde a las etiquetas td Y th */ {
+      border: 1px solid black;
+    }
+  }
+
+  .button {
+    .add {
+      background-color: #4caf50; /* Green */
+      border: none;
+      color: white;
+      padding: 8px 8px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .delete {
+      background-color: #f44336; /* Red */
+      border: none;
+      color: white;
+      padding: 8px 8px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+  }
+}

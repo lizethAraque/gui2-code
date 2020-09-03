@@ -1,0 +1,33 @@
+<div class = "container">
+    <div>
+      <table class="tableStyile">
+        <tr>
+          <th>Codigo</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Notas</th>
+          <th>Edad</th>
+        </tr>
+  
+        <tr *ngFor="let it of students">
+          <td>{{it.code}}</td>
+          <td>{{it.name}}</td>
+          <td>{{it.surName}}</td>
+          <td>{{it.note}}</td>
+          <td>{{it.age}}</td>
+        </tr>
+      </table>
+    </div>
+  
+    <div class="button">
+      <button name="Agregar" type="button" class="add" (click)="add()">
+        Agregar
+      </button>
+      <button name="Elminar" type="button" class="delete" (click)="delete()">
+        Eliminar
+      </button>
+    </div>
+  
+    <app-popup *ngIf="state" (hide)="hideOrShowPopUp($event)" (user)="addUserOrDelete($event)" [indicate]="indicate"> </app-popup>
+  </div>
+  

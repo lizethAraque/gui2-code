@@ -1,0 +1,44 @@
+.modal {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    .modal-contenido {
+      background-color: gainsboro;
+      width: 300px;
+      padding: 10px 20px;
+      margin: 20% auto;
+      position: relative;
+  
+      .button {
+        .add {
+          background-color: #4caf50; /* Green */
+          border: none;
+          color: white;
+          padding: 8px 8px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 12px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+  
+        .delete {
+          background-color: #f44336; /* Red */
+          border: none;
+          color: white;
+          padding: 8px 8px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 12px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,36 @@
+<div id="miModal" class="modal">
+    <div class="modal-contenido">
+      <h2>Agregar</h2>
+      <p>Ingrese informacion.</p>
+      <div>
+          <label>Codigo</label>
+          <input type="text" name="codigo" id="codigo" placeholder="Codigo"  [(ngModel)]="dataUser.code">
+        </div>
+      <div>
+        <label>Nombre</label>
+        <input type="text" name="nombre " id="nombre" placeholder="Nombre" [(ngModel)]="dataUser.name" />
+      </div>
+  
+      <div>
+        <label>Apellido</label>
+        <input type="text" name="apellido" id="apellido" placeholder="Apellido" [(ngModel)]="dataUser.surName"   />
+      </div>
+  
+      <div>
+        <label>Nota</label>
+        <input type="text" name="nota" id="nota" placeholder="Nota" [(ngModel)]="dataUser.note" />
+      </div>
+  
+      <div>
+        <label>Edad</label>
+        <input type="text" name="edad" id="edad" placeholder="Edad" [(ngModel)]="dataUser.age" />
+      </div>
+  
+      <div class="button">
+        <button name="Eliminar" type="button" class="add" (click)="addUserOrDelete()" *ngIf="!indicate">Eliminar-</button>
+        <button name="Agregar" type="button" class="add" (click)="addUserOrDelete()"  *ngIf="indicate">Agregar</button>
+        <button name="Cancelar" type="button" class="delete" (click)="hidePage()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+  
